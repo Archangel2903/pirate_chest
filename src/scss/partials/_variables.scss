@@ -1,7 +1,11 @@
+:root {
+  --text-color: #643F24;
+}
+
 // main colors
 $main-first-color: #7a0000;
 $main-second-color: #007d00;
-$main-third-color: #000082;
+$main-third-color: #643F24;
 
 // colors
 $title-color: #111;
@@ -9,7 +13,7 @@ $text-color: #333;
 $input-placeholder-color: #aaa;
 
 // fonts
-$font-family-base: 'Verdana', sans-serif;
+$font-family-base: 'Inknut Antiqua', sans-serif;
 $font-family-custom: 'Arial', sans-serif;
 $font-family-unique: 'Times New Roman', serif;
 

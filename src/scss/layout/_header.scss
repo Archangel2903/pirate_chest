@@ -4,8 +4,12 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 50%;
   min-width: 320px;
   width: 100%;
+  padding: 20px 20px 0;
+  transform: translateX(-50%);
   z-index: 100;
 }

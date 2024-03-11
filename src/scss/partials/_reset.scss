@@ -17,8 +17,10 @@ html, body {
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
+  color: $main-third-color;
   font-family: $font-family-base;
   font-size: $font-size-default;
+  font-weight: $font-weight-medium;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
@@ -84,7 +86,7 @@ button, input, textarea {
   border-radius: 0;
   box-sizing: border-box;
   color: black;
-  outline: none;
+  outline: none !important;
   overflow: auto;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -305,18 +307,18 @@ iframe {
 
 ::selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: #ffffff;
+  background: $main-third-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: #ffffff;
+  background: $main-third-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: #ffffff;
+  background: $main-third-color;
 }

@@ -75,17 +75,17 @@
   justify-content: center;
   align-content: stretch;
   align-items: stretch;
-  background: #E19000 url('../img/button_center.svg') repeat-x center center;
+  background: transparent url('../img/button_center.svg') repeat-x center center;
   background-size: contain;
   border: none;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 900;
-  height: 64px;
+  height: 48px;
   text-align: center;
   text-decoration: none !important;
   text-transform: uppercase;
-  padding: 22px 0;
+  padding: 16px 0;
   position: relative;
   overflow: visible;
   transition: $transition-base;
@@ -98,8 +98,8 @@
     right: auto;
     bottom: auto;
     left: auto;
-    width: 32px;
-    height: 64px;
+    width: 21px;
+    height: 48px;
     transform: translateY(-50%);
     transition: $transition-base;
     will-change: background;
@@ -107,21 +107,26 @@
   &::before {
     right: 100%;
     background: transparent url('../img/button_left.svg') no-repeat center center;
+    background-size: contain;
   }
   &::after {
     left: 100%;
     background: transparent url('../img/button_right.svg') no-repeat center center;
+    background-size: contain;
   }
 
   &:hover {
-    background: #B24A1C url('../img/button_center_hover.svg') repeat-x center center;
+    background: transparent url('../img/button_center_hover.svg') repeat-x center center;
+    background-size: contain;
     color: #ffffff;
 
     &::before {
       background: transparent url('../img/button_left_hover.svg') no-repeat center center;
+      background-size: contain;
     }
     &::after {
       background: transparent url('../img/button_right_hover.svg') no-repeat center center;
+      background-size: contain;
     }
   }
 }
@@ -144,37 +149,119 @@
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    gap: 32px;
-    padding: 55px 0 64px;
+    gap: 20px;
+    padding: 35px 0 40px;
     background: url('../img/modal-background.png') no-repeat center;
     background-size: contain;
     box-shadow: none !important;
     border: none !important;
   }
+  &-img {
+    width: 128px;
+
+    img {
+      width: 100%;
+    }
+  }
   &-title {
     margin: 0;
     color: var(--text-color);
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 900;
     text-align: center;
   }
   &-subtitle {
-    font-size: 26px;
+    margin: 0;
+    font-size: 16px;
   }
   &-text {
     max-width: 360px;
+    margin: 0;
     text-align: center;
 
     &_sm {
-      font-size: 20px;
+      font-size: 14px;
       font-weight: 500;
     }
     &_lg {
-      font-size: 40px;
+      font-size: 26px;
       font-weight: 900;
     }
   }
   &-backdrop {
 
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .button-styled {
+    height: 56px;
+    padding: 20px 0;
+    font-size: 15px;
+
+    &::before, &::after {
+      width: 28px;
+      height: 56px;
+    }
+  }
+
+  .modal {
+    &-content {
+      gap: 24px;
+      padding: 55px 0 56px;
+    }
+    &-img {
+      width: 170px;
+    }
+    &-title {
+      font-size: 26px;
+    }
+    &-subtitle {
+      font-size: 20px;
+    }
+    &-text {
+      &_sm {
+        font-size: 16px;
+      }
+      &_lg {
+        font-size: 32px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .button-styled {
+    height: 64px;
+    padding: 22px 0;
+    font-size: 18px;
+
+    &::before, &::after {
+      width: 32px;
+      height: 64px;
+    }
+  }
+
+  .modal {
+    &-content {
+      gap: 32px;
+      padding: 55px 0 64px;
+    }
+    &-img {
+      width: 204px;
+    }
+    &-title {
+      font-size: 32px;
+    }
+    &-subtitle {
+      font-size: 26px;
+    }
+    &-text {
+      &_sm {
+        font-size: 20px;
+      }
+      &_lg {
+        font-size: 40px;
+      }
+    }
   }
 }
